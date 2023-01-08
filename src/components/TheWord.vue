@@ -1,11 +1,13 @@
 <template>
-  <p class="text-gray-400 text-4xl">
-    {{ word }}
-  </p>
+  <div class="flex justify-evenly items-start w-full">
+    <p class="text-gray-400 text-3xl inline-block">
+      {{ word }}
+    </p>
 
-  <span class="text-gray-400 text-4xl">
-    {{ translate }}
-  </span>
+    <p class="text-gray-400 text-3xl inline-block">
+      {{ translate }}
+    </p>
+  </div>
 
 </template>
 
