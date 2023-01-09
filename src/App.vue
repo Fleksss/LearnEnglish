@@ -1,6 +1,6 @@
 <template>
   <div class="container w-[100vw] h-[100vh] flex justify-center items-center">
-    <div class="w-[500px] h-[400px] shadow-2xl border-2 border-rose-500 rounded-3xl">
+    <div class="w-3/4 h-3/4 shadow-2xl border-2 border-rose-500 rounded-3xl">
 
       <!-- <TheHeroSection title="Dictionary"/> -->
 

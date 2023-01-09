@@ -1,12 +1,17 @@
 <template>
-  <div class="flex justify-evenly items-start w-full">
-    <p class="text-gray-400 text-3xl inline-block">
-      {{ word }}
-    </p>
+  <div class="flex justify-center items-start w-full border-2 border-green-500 rounded-3xl shadow-2xl">
+    <div class="w-1/2">
+      <p class="text-gray-400 text-3xl px-5 text-left">
+        {{ word }}
+      </p>
+    </div>
 
-    <p class="text-gray-400 text-3xl inline-block">
-      {{ translate }}
-    </p>
+    <div class="w-1/2">
+      <p class="text-gray-400 text-3xl px-5 text-left">
+        {{ translate }}
+      </p>
+    </div>
+
   </div>
 
 </template>
@@ -19,4 +24,3 @@ export default {
   }
 }
 </script>
-
