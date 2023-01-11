@@ -2,11 +2,12 @@
   <div class="container w-[100vw] h-[100vh] flex justify-center items-center">
     <div class="w-3/4 h-3/4 shadow-2xl border-2 border-rose-500 rounded-3xl">
 
-      <!-- <TheHeroSection title="Dictionary"/> -->
+      <TheHeroSection title="Dictionary" @introduction="introduction" v-if="isClicked" />
 
       <!-- Dictionary -->
 
-      <div class="dictionary w-full h-full pt-5 flex flex-col gap-5 items-start">
+      <div class="dictionary w-full h-full pt-5 flex flex-col gap-5 items-start overflow-y-scroll p-4"
+        v-if="!isClicked">
         <TheWord v-for="item in wordBase" :key="item" :word="item.spelling" :translate="item.translate" />
       </div>
 
@@ -27,6 +28,7 @@ export default {
 
   data() {
     return {
+      isClicked: true,
       wordBase: [
         {
           spelling: 'hello',
@@ -38,9 +40,49 @@ export default {
           translate: 'хороший тому пример',
           id: '1'
         },
-      ]
+        {
+          spelling: 'according to',
+          translate: 'согласно c',
+          id: '2'
+        },
+        {
+          spelling: 'accurate',
+          translate: 'точный',
+          id: '3'
+        },
+        {
+          spelling: 'acquire',
+          translate: 'приобретать',
+          id: '4'
+        },
+        {
+          spelling: 'ancient',
+          translate: 'древний',
+          id: '5'
+        },
+        {
+          spelling: 'area',
+          translate: 'область',
+          id: '6'
+        },
+        {
+          spelling: 'arithmetic',
+          translate: 'арифметика',
+          id: '7'
+        },
+        {
+          spelling: 'around',
+          translate: 'вокруг',
+          id: '8'
+        },
+      ],
     }
   },
+  methods: {
+    introduction() {
+      this.isClicked = false
+    }
+  }
 }
 </script>
 
