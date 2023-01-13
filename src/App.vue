@@ -75,6 +75,21 @@ export default {
           translate: 'вокруг',
           id: '8'
         },
+        {
+          spelling: 'unambiguous',
+          translate: 'однозначный',
+          id: '9'
+        },
+        {
+          spelling: 'trade-off',
+          translate: 'компромисс',
+          id: '10'
+        },
+        {
+          spelling: 'apply',
+          translate: 'применять',
+          id: '11'
+        },
       ],
     }
   },
