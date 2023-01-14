@@ -6,7 +6,7 @@
 
       <!-- Dictionary -->
 
-      <div class="dictionary w-full h-full pt-5 flex flex-col gap-5 items-start overflow-y-scroll p-4"
+      <div class="dictionary w-full h-full p-5 flex flex-col gap-5 items-start overflow-y-scroll snap-y"
         v-if="!isClicked">
         <TheWord v-for="item in wordBase" :key="item" :word="item.spelling" :translate="item.translate" />
       </div>
