@@ -1,9 +1,9 @@
 <template>
   <div class="container w-[100vw] h-[100vh] flex justify-center items-center">
-    <div class="w-3/4 h-3/4 shadow-2xl border-2 border-rose-500 rounded-3xl">
-
-      <TheHeroSection title="Dictionary" @introduction="introduction" v-if="isClicked" />
-
+    <div class="w-3/4 h-3/4 shadow-2xl border-2 border-rose-500 rounded-3xl relative">
+      <transition name="entry">
+        <TheHeroSection title="Dictionary" @introduction="introduction" v-if="isClicked" />
+      </transition>
       <!-- Dictionary -->
 
       <div class="dictionary w-full h-full p-5 flex flex-col gap-5 items-start overflow-y-scroll snap-y"
@@ -102,5 +102,13 @@ export default {
 </script>
 
 <style>
+.entry-enter-active,
+.entry-leave-active {
+  transition: all 1s;
+}
 
+.entry-enter-from,
+.entry-leave-to {
+  opacity: 0;
+}
 </style>
