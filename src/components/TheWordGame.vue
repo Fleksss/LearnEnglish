@@ -1,9 +1,9 @@
 <template>
   <div class="">
-    <input type="text" v-model="input" @click.shift="wg">
     <h1>
       {{ text }}
     </h1>
+    <input type="text" :v-model="input" @focus="$emit('input')">
     <h1>{{ answer }}</h1>
   </div>
 </template>
@@ -12,21 +12,16 @@
 export default {
   props: {
     text: String,
+    input: {
+      type: String,
+      default: input
+    }
   },
   data() {
     return {
       answer: false
     }
   },
-  methods: {
-    wg() {
-      if (input === 'word') {
-        this.answer = true
-        console.log('fdsa');
-
-      }
-    }
-  }
 }
 </script>
 
