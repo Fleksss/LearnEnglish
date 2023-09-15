@@ -1,15 +1,15 @@
 <template>
   <div class="container w-[100vw] h-[100vh] flex justify-center items-center">
     <div class="w-3/4 h-3/4 shadow-2xl border-2 border-rose-500 rounded-3xl relative">
-      <!-- <transition name="entry">
+      <transition name="entry">
         <TheHeroSection title="Dictionary" @introduction="introduction" v-if="isClicked" />
       </transition>
 
       <div class="dictionary w-full h-full p-5 flex flex-col gap-5 items-start overflow-y-scroll snap-y"
         v-if="!isClicked">
         <TheWord v-for="item in wordBase" :key="item" :word="item.spelling" :translate="item.translate" />
-      </div> -->
-      <TheWordGame :text="'fdsafsda'" />
+      </div>
+      <!-- <TheWordGame :text="'fdsafsda'" /> -->
     </div>
 
 
